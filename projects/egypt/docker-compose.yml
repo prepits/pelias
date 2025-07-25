@@ -39,7 +39,6 @@ services:
     volumes:
       - "./pelias.json:/code/pelias.json"
       - "${DATA_DIR}:/data"
-      - "${DATA_DIR}/placeholder:/code/data"
       - "./blacklist/:/data/blacklist"
   whosonfirst:
     image: pelias/whosonfirst:master
@@ -97,7 +96,6 @@ services:
     volumes:
       - "./pelias.json:/code/pelias.json"
       - "${DATA_DIR}:/data"
-      - "${DATA_DIR}/interpolation:/code/data"
   pip:
     image: pelias/pip-service:master
     container_name: pelias_pip-service
@@ -108,7 +106,6 @@ services:
     volumes:
       - "./pelias.json:/code/pelias.json"
       - "${DATA_DIR}:/data"
-      - "${DATA_DIR}/pip:/code/data"
   elasticsearch:
     image: pelias/elasticsearch:7.17.27
     container_name: pelias_elasticsearch
@@ -129,8 +126,6 @@ services:
     image: nginx:alpine
     container_name: pelias_nginx
     restart: always
-    environment:
-      - DOMAIN=${DOMAIN}
     ports:
       - "80:80"
       - "443:443"
