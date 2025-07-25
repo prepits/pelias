@@ -31,8 +31,8 @@
       "libpostal": { "url": "http://libpostal:4400" }
     },
     "defaultParameters": {
-      "focus.point.lat": -21.2338,
-      "focus.point.lon": -159.7778
+      "focus.point.lat": 30.0444,
+      "focus.point.lon": 31.2357
     }
   },
   "imports": {
@@ -53,16 +53,16 @@
     },
     "geonames": {
       "datapath": "/data/geonames",
-      "countryCode": "CK"
+      "countryCode": "EG"
     },
     "openstreetmap": {
       "download": [
-        { "sourceURL": "https://download.geofabrik.de/australia-oceania/cook-islands-latest.osm.pbf" }
+        { "sourceURL": "https://download.geofabrik.de/africa/egypt-latest.osm.pbf" }
       ],
       "leveldbpath": "/tmp",
       "datapath": "/data/openstreetmap",
       "import": [{
-        "filename": "cook-islands-latest.osm.pbf"
+        "filename": "egypt-latest.osm.pbf"
       }]
     },
     "polyline": {
@@ -72,10 +72,9 @@
     "whosonfirst": {
       "datapath": "/data/whosonfirst",
       "importPostalcodes": true,
-      "countryCode": "CK",
+      "countryCode": "EG",
       "importPlace": [
-        "85632755",
-        "85632757"
+        "85670859"
       ]
     }
   }
